@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
+import { AuthContext } from "./AuthProvider";
+
 const Home = () => {
+  const contextApi = useContext(AuthContext);
+  console.log(contextApi);
   return (
     <HelmetProvider>
       <Helmet>
